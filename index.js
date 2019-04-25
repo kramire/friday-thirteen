@@ -27,6 +27,13 @@
 
 function unluckyDays (year) {
   // your code here
+  let unlucky = 0;
+  for (let i = 0; i <12; i++) {
+    let date = new Date(year, i, 13);
+    let dow = date.getDay();
+    if (dow === 5) unlucky++;
+  }
+  return unlucky;
 }
 
 module.exports = unluckyDays;
